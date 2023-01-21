@@ -42,7 +42,7 @@ export const fetchNotifications =
         dispatch(loadNotifications(res));
       })
       .catch((err) => {
-        dispatch(addAlert({ message: err.message, type: "danger" }));
+        dispatch(addAlert({ message: err?.message, type: "danger" }));
       });
   };
 
@@ -61,6 +61,6 @@ export const updateNotifications =
     return apiCall("put", `/users/${id}/notifications`)
       .then(() => dispatch(removeNotifications(sub_id)))
       .catch((err) => {
-        dispatch(addAlert({ message: err.message, type: "danger" }));
+        dispatch(addAlert({ message: err?.message, type: "danger" }));
       });
   };

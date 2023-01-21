@@ -25,7 +25,7 @@ export const searchAll = (): SearchAllAction => async (dispatch) => {
       dispatch(removeLoader("search"));
     })
     .catch((err) => {
-      dispatch(addAlert({ message: err.message, type: "danger" }));
+      dispatch(addAlert({ message: err?.message, type: "danger" }));
     });
 };
 
@@ -39,6 +39,6 @@ export const searchUsers =
         dispatch(removeLoader("search"));
       })
       .catch((err) => {
-        dispatch(addAlert({ message: err.message, type: "danger" }));
+        dispatch(addAlert({ message: err?.message, type: "danger" }));
       });
   };

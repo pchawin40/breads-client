@@ -67,7 +67,7 @@ export const fetchReadings =
           dispatch(removeLoader(list));
         })
         .catch((err) => {
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     } else if (list === "subscriptions") {
       dispatch(addLoader(list));
@@ -79,7 +79,7 @@ export const fetchReadings =
           dispatch(removeLoader(list));
         })
         .catch((err) => {
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     } else if (id) {
       dispatch(addLoader(list));
@@ -89,7 +89,7 @@ export const fetchReadings =
           dispatch(removeLoader(list));
         })
         .catch((err) => {
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     }
   };

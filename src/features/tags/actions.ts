@@ -38,7 +38,7 @@ export const fetchTags = (list: string, id: string): fetchingTags => {
         })
         .catch((err) => {
           console.log(err);
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     } else if (list === "subscriptions") {
       dispatch(addLoader("tags"));
@@ -51,7 +51,7 @@ export const fetchTags = (list: string, id: string): fetchingTags => {
         })
         .catch((err) => {
           console.log(err);
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     } else if (id) {
       dispatch(addLoader("userTags"));
@@ -62,7 +62,7 @@ export const fetchTags = (list: string, id: string): fetchingTags => {
         })
         .catch((err) => {
           console.log(err);
-          dispatch(addAlert({ message: err.message, type: "danger" }));
+          dispatch(addAlert({ message: err?.message, type: "danger" }));
         });
     }
   };

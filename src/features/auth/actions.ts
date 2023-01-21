@@ -49,7 +49,7 @@ export const authUser =
         dispatch(setCurrentUser(user));
       })
       .catch((err: any) => {
-        dispatch(addAlert({ message: err.message, type: "danger" }));
+        dispatch(addAlert({ message: err?.message, type: "danger" }));
       });
   };
 
